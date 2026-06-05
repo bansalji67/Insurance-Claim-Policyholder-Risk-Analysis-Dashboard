@@ -1,42 +1,54 @@
 # Insurance-Claim-Policyholder-Risk-Analysis-Dashboard
-Purpose to Create of this Dashboard : The dashboard was created to provide data‑driven insights into insurance profitability, customer behaviour, and retention strategies. 
-It enables business leaders and analysts to below points.
-1. Monitor premium vs. claim profitability to assess risk exposure
-2. Track customer conversion and retention rates for sustainable growth
-3. Identify high‑risk claims and loss ratios to strengthen underwriting policies
-4. Evaluate the impact of discounts and incentives on overall revenue
-5. Understand customer demographics (senior vs. non‑senior) and their effect on renewal rates.
-By consolidating these KPIs, the dashboard supports strategic decision‑making in pricing, marketing, and claims management.
 
-🔍 Key Insights from the Dashboard
-he Loss Ratio highlights whether claims are eroding premium revenue.
+📌 Overview
+This project presents a Power BI dashboard built on synthetic insurance data to analyze premium vs. claim profitability, customer behavior, retention, and risk management. The dashboard leverages DAX measures to provide actionable insights for insurance companies, focusing on profitability, customer engagement, and retention strategies.
 
-Max Premium and Average Premium help identify high‑value customers and revenue concentration.
+🎯 Purpose
+The dashboard was created to:
 
-Customer Behavior & Retention:
+Evaluate insurance profitability by comparing premiums and claims.
 
-Conversion Rate and Quotation Requests per Converted Customer reveal the efficiency of sales funnels.
+Track customer conversion, renewal, and retention rates.
 
-Renewal Rate and Retention Rate measure customer loyalty and long‑term profitability.
+Identify high‑risk claims and monitor loss ratios.
 
-Senior % provides demographic insights to tailor products for different age groups.
+Assess the impact of discounts and incentives on revenue.
 
-Risk Management:
+Understand customer demographics (senior vs. non‑senior) and their effect on renewals.
 
-High Security Claim count helps flag potential fraud or high‑severity risks.
+Link digital engagement metrics (website visits, quotes requested) with conversion success.
 
-Total Credit Score aggregates customer risk profiles for underwriting decisions.
+🔍 Key Insights
+Profitability: Loss Ratio highlights claim impact on revenue; Max Premium identifies high‑value customers.
 
-Discount & Incentive Impact:
+Customer Behavior: Conversion Rate and Renewal Rate measure sales funnel efficiency and loyalty.
 
-Total Discounts vs. Premium Revenue shows whether incentives drive profitable conversions or erode margins.
+Risk Management: High Security Claim count flags potential fraud or severe risks.
 
-Digital Engagement:
+Discounts & Incentives: Total Discounts vs. Premium Revenue shows incentive profitability.
 
-Average Website Visits connects online activity with conversion success, guiding digital marketing strategies.
+Digital Engagement: Website Visits and Quotes Requested connect online activity to conversions.
+
+🛠️ Tech Stack
+Power BI for dashboard creation
+
+DAX Measures for custom calculations
+
+Synthetic Insurance Dataset for analysis
+
+📈 DAX Measures Implemented
+Some of the key measures include:
+
+Loss Ratio = [Claim Adjustment]/[Total Prem Revenue]
+
+Conversion Rate = DIVIDE(SUM(Conversion_Status), COUNTROWS(...))
+
+Retention Rate = DIVIDE([Renewals Policies],[New Policies]+[Renewals Policies])
+
+High Security Claim = CALCULATE(COUNTROWS(...), Claims_Severity="High")
 
 🚀 Business Value
-This dashboard empowers insurance companies to:
+This dashboard helps insurance companies to:
 
 Optimize pricing models by balancing premiums and claims.
 
@@ -47,3 +59,4 @@ Enhance risk management by identifying high‑severity claims early.
 Boost profitability by aligning discounts with customer lifetime value.
 
 Drive digital transformation by linking online engagement to conversions.
+
